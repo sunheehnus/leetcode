@@ -47,28 +47,3 @@ class Solution {
 		return res;
 	}
 }
-
-public class word_break_ii {
-	public static void main(String [] args) {
-		Solution sol = new Solution();
-		String str = "aaaaaaaaaaaaaaaaab";
-		//str = "catsanddog";
-		Set dict = new HashSet();
-		//dict.add("cat");
-		//dict.add("cats");
-		//dict.add("and");
-		//dict.add("sand");
-		//dict.add("dog");
-		dict.add("a");
-		dict.add("aa");
-		dict.add("aaa");
-		dict.add("aaaa");
-		dict.add("aaaaa");
-		dict.add("aaaaaa");
-		dict.add("aaaaaaa");
-		dict.add("aaaaaaaa");
-		dict.add("aaaaaaaaa");
-		dict.add("aaaaaaaaab");
-		System.out.println(sol.wordBreak(str, dict));
-	}
-}

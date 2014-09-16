@@ -36,8 +36,4 @@ public class Solution {
 		}
 		return new String(c_s, 0, length);
 	}
-	public static void main(String [] args) {
-		Solution sol = new Solution();
-		System.out.println(sol.reverseWords("a"));
-	}
 }

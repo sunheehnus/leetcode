@@ -132,22 +132,4 @@ public class Solution {
 			}
 		}
 	}
-	public static void main(String[] args) {
-		Solution sol = new Solution();
-		char [][] board = {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
-		//char [][] board = {{'X','X','X'},{'X','O','X'},{'X','X','X'}};
-		for (int y = 0; y < board.length; y++) {
-			for (int x = 0; x < board[0].length; x++) {
-				System.out.print (board[y][x]);
-			}
-			System.out.println ();
-		}
-		sol.solve(board);
-		for (int y = 0; y < board.length; y++) {
-			for (int x = 0; x < board[0].length; x++) {
-				System.out.print (board[y][x]);
-			}
-			System.out.println ();
-		}
-	}
 }
