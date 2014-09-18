@@ -10,7 +10,7 @@
  * }
  */
 class Solution {
-    public void swapval(ListNode x, ListNode y)
+	public void swapval(ListNode x, ListNode y)
 	{
 		int tmp;
 		tmp = x.val;
@@ -21,6 +21,20 @@ class Solution {
 	{
 		if (head == null || rear == null || head == rear)
 			return;
+
+		for (ListNode end = head, mid = head;;mid = mid.next) {
+			end = end.next;
+			if (end == rear.next) {
+				swapval(mid, rear);
+				break;
+			}
+			end = end.next;
+			if (end == rear.next) {
+				swapval(mid, rear);
+				break;
+			}
+		}
+
 		ListNode prefloorNode = null;
 		ListNode floorNode = head, ceilNode = head;
 		boolean is_sorted = true;
@@ -47,7 +61,7 @@ class Solution {
 	public ListNode sortList(ListNode head) {
 		ListNode rear = head;
 		if (head == null)
-		    return head;
+			return head;
 		while (rear.next != null)
 			rear = rear.next;
 		oneway_quicksort_list(head, rear);
