@@ -3,14 +3,15 @@ public class Solution {
 		if (A.length == 0)
 			return false;
 		int start = 0, end = A.length - 1;
-		while (start <= end && A[start] < A[0]) {
+		while (start <= end && A[start] >= A[0]) {
 			int mid = start + (end - start) / 2;
 			if (A[mid] >= A[start])
 				start = mid + 1;
 			else if (A[mid] < A[start])
 				end = mid - 1;
 		}
-		if (start >= A.length) {
+		if (start < A.length || A[0] != A[A.length - 1])
+		{
 			int start1 = 0, end1 = start - 1, start2 = start, end2 = A.length - 1;
 			while (start1 <= end1) {
 				int mid = start1 + (end1 - start1) / 2;
