@@ -24,7 +24,8 @@ class MinStack {
 
     public void pop() {
         if (stack.size() != 0) {
-            minPos = stack.get(stack.size() - 1).preMin;
+            if (minPos == stack.size() - 1)
+                minPos = stack.get(stack.size() - 1).preMin;
             stack.remove(stack.size() - 1);
         }
     }
